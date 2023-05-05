@@ -3,27 +3,27 @@ on: push
 jobs:
   job1:
     name: job1
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: name of the step 1 job 1
         uses: actions/checkout@v3
   job2:
     name: job
-    run-on: windows-latest
+    runs-on: windows-latest
     steps:
       - name: name of the step 1 job 2
         uses: actions/checkout@v3
 
   job3:
     name: job
-    run-on: macos-latest
+    runs-on: macos-latest
     steps:
       - name: name of the step 1 job 3
         uses: actions/checkout@v3
 
   job4:
     name: job
-    run-on: macos-latest
+    runs-on: macos-latest
     needs: [job1, job2, job3]
     steps:
       - name: name of the step 1 job 4
